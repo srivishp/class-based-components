@@ -4,6 +4,11 @@ import classes from "./User.module.css";
 // We import Component and use this.props, to create class based components
 // Class based components can work together with functional components
 class User extends Component {
+  // Whena component is removed from the DOM
+  componentWillUnmount() {
+    console.log("User will unmount");
+  }
+
   render() {
     return <li className={classes.user}>{this.props.name}</li>;
   }

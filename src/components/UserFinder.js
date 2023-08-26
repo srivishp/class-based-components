@@ -18,6 +18,14 @@ class UserFinder extends Component {
     };
   }
 
+  // mounting means evaluating and rendering
+  // componentDidMount will run only once
+  // equivalent to useEffect running without any dependencies or running for the first time
+  componentDidMount() {
+    // Send HTTP request...
+    this.setState({ filteredUsers: DUMMY_USERS });
+  }
+
   // equivalent to useEffect()
   // componentDidUpdate needs an if check, as it does not have a dependency array like useEffect()
   componentDidUpdate(prevProps, prevState) {

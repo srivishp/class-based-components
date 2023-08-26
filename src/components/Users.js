@@ -26,6 +26,7 @@ class Users extends Component {
   }
 
   render() {
+    console.log(this.props.users);
     const usersList = (
       <ul>
         {this.props.users.map((user) => (
